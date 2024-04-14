@@ -1,5 +1,7 @@
 ## Dash Autonomous Visualization System
 
+Visualizacion de deteccion de manejo
+
 This is the explorer app accompanying the [Dash AVS UI](https://github.com/plotly/dash-avs-ui). This app loads scenes collected from self-driving car trips, and displays both sensor (e.g. lidar, path) and human annotated data (bounding boxes). You can choose between a basic and an advanced one UI.
 
 
