@@ -1,3 +1,5 @@
+Funciona
+
 # Manufacturing SPC Dashboard
 
 ## Introduction
