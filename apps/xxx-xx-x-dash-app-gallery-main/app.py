@@ -53,17 +53,17 @@ btn_group = html.Div([
             outline=True,
             className='mt-2 mt-md-0 me-md-2'
         ),
+        #dbc.Button(
+        #    "Dash Docs",
+        #    id="dash-docs",
+        #    href="https://dash.plotly.com/",
+        #    target="_blank",
+        #    color='primary',
+        #    outline=True,
+        #    className='text-nowrap mt-2 mt-md-0'
+        #),
         dbc.Button(
-            "Dash Docs",
-            id="dash-docs",
-            href="https://dash.plotly.com/",
-            target="_blank",
-            color='primary',
-            outline=True,
-            className='text-nowrap mt-2 mt-md-0'
-        ),
-        dbc.Button(
-            "Fullscreen App", 
+            "Pantalla Completa", 
             id="open-fs-app",
             color='primary',
             outline=True,
@@ -81,10 +81,10 @@ navbar = dbc.Navbar([
     dbc.Container([
         html.A([
             html.Img(src=logo, height=40, width=40, className='align-middle me-2'),
-            html.Span('Dash Example Index',
+            html.Span('Dashboards de mantenimiento',
                         className='d-none d-lg-inline-block align-middle'
                         ),
-            html.Span('Example Index', className='d-lg-none align-middle')
+            html.Span('Dashboards DM', className='d-lg-none align-middle')
         ], href='/', className='navbar-brand fw-bold'),
         
         dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
@@ -101,7 +101,7 @@ navbar = dbc.Navbar([
 footer = html.H4(
     [
         dcc.Link(
-            " Thank you contributors!",
+            " GOM - Departamento de mantenimiento RMC 2024",
             className="bi bi-github",
             href="https://github.com/AnnMarieW/dash-app-gallery/graphs/contributors",
             target="_blank",

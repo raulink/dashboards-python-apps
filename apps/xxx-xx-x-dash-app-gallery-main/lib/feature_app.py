@@ -91,7 +91,7 @@ components = {key: components[key] for key in sorted(components)}
 
 feature_app_div = html.Div(
     [
-        dbc.Label("Featured Examples", className="fw-bolder"),
+        dbc.Label("Indice", className="fw-bolder"),
         dbc.Accordion(
             [
                 dbc.AccordionItem(
@@ -103,7 +103,7 @@ feature_app_div = html.Div(
                         )
                         for name, searchterm in figure_type.items()
                     ],
-                    title="Figures",
+                    title="Ingresos",
                 ),
                 dbc.AccordionItem(
                     [
@@ -114,7 +114,7 @@ feature_app_div = html.Div(
                         )
                         for name, searchterm in callback_type.items()
                     ],
-                    title="Callbacks",
+                    title="Salidas",
                 ),
                 dbc.AccordionItem(
                     [
@@ -125,7 +125,7 @@ feature_app_div = html.Div(
                         )
                         for name, searchterm in components.items()
                     ],
-                    title="Components",
+                    title="Contrataciones",
                 ),
             ],
             start_collapsed=True,

@@ -35,7 +35,7 @@ def make_code_div(code):
     )
 
 
-def example_app(filename, make_layout=None, run=True, show_code=True, notes=None):
+def example_app(filename, make_layout=None, run=True, show_code=False, notes=None):
     """
     Creates the "code and show layout for an example dash app.
 
@@ -82,7 +82,7 @@ def make_side_by_side(code, show_app, notes):
 
     return dbc.Row(
         [
-            dbc.Col(dbc.Card(show_app, style={"padding": "10px"}), width=12, lg=6)
+            dbc.Col(dbc.Card(show_app, style={"padding": "10px"}), width=12, lg=12)
             if show_app
             else None,
             dbc.Col(

@@ -2,7 +2,10 @@ from dash import dcc
 import dash_bootstrap_components as dbc
 
 content = """
-#### Welcome to the Dash Example Index 
+#### Bienvenido a los Dashboards de mantenimiento
+
+Este es el proyecto base para la visualización de datos del Departamento de Mantenimiento
+
 
 This is a community-supported project designed for people new to Plotly and Dash. It contains minimal sample apps with ~100 lines of code to demonstrate basic usage of graphs, components, callbacks, and layout design. 
 
