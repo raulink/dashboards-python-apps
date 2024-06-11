@@ -3,7 +3,7 @@ import openai  # pip install openai
 from dash import Dash,dcc, html, Input, Output, State  # pip install dash
 import dash_bootstrap_components as dbc                # pip install dash-bootstrap-components
 
-openai.api_key = "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"
+openai.api_key = "test "#"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"
 
 # Initialize the ChatGPT model
 model_options = ['text-davinci-003','text-curie-001', 'text-babbage-001', 'text-ada-001', 'text-davinci-002', 'text-davinci-001']

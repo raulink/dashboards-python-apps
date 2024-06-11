@@ -4,7 +4,7 @@ from embedchain import App
 # pip install -r requirements.txt
 
 # Create a bot instance
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "test" #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"
 ai_bot = App.from_config(config_path="config.yaml")
 
 # Embed resources: websites, PDFs, videos
