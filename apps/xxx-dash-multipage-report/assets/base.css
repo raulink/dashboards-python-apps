@@ -6,8 +6,9 @@ body {
 	  margin: 0;
 	  padding: 0;
 	  background-color: #FAFAFA;
-	  font-size: 1.1rem;
+	  font-size: 1.8rem;
 	  line-height: 1.3;
+    font-family: 'Arial Narrow', sans-serif;
  }
  * {
 	  box-sizing: border-box;
