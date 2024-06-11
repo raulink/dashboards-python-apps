@@ -3,6 +3,7 @@ vv/
 *.pyc
 *.DS_Store
 venv/
+virtualpy/
 .idea/
 .DS_Store
 .Rproj.user
