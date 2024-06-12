@@ -2,17 +2,18 @@ from dash import dcc
 import dash_bootstrap_components as dbc
 
 content = """
-#### Bienvenido a los Dashboards de mantenimiento
+#### Dashboards de mantenimiento
 
 Este es el proyecto base para la visualización de datos del Departamento de Mantenimiento
 
 
-This is a community-supported project designed for people new to Plotly and Dash. It contains minimal sample apps with ~100 lines of code to demonstrate basic usage of graphs, components, callbacks, and layout design. 
+La descripción completa se presenta en el documento, [Sistema de Contrataciones](https://docs.google.com/document/d/1dCmA8yI97d3_5Smukmo6prUbArymdYG8vqvryUCo3a4/edit).
 
-For access to our newsletter that includes cheat sheets, tips and tricks, community apps, and deep dives into the Dash architecture, [join Dash Club](https://go.plotly.com/dash-club).
+Comprende inicialmente 2 modulos:
+* Entradas / Salidas almacen
+* Procesos PAC
 
-If you have any suggestions for improvements, please open a [new issue](https://github.com/AnnMarieW/dash-app-gallery/issues).
-If you would like to contribute your own app, checkout the [contributing guide](https://github.com/AnnMarieW/dash-app-gallery/blob/main/CONTRIBUTING.md). 
+Para el control de procesos de contratacion se propone un flujo de trabajo realizado en la direccion [Lineas](http://lineas.miteleferico.bo)
 
 """
 

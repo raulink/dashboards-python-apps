@@ -69,7 +69,7 @@ btn_group = html.Div([
             outline=True,
         ),
         dbc.Button(
-            "Fullscreen Code", 
+            "Datos Adicionales", 
             id="open-fs-code",
             color='primary',
             outline=True,

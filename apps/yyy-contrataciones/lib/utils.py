@@ -29,6 +29,7 @@ def file_names():
 
 file_names = file_names()
 
+# Importar los archivos de las carpetas
 example_modules = {p: import_module(f"{EXAMPLE_APPS_DIR_NAME}.{p}") for p in file_names}
 example_apps = {p: m.app for p, m in example_modules.items()}
 example_source_codes = {p: getsource(m) for p, m in example_modules.items()}

@@ -25,4 +25,4 @@ This example app was contributed by [Plotly](https://plotly.com/python/)
 
 
 
-layout = example_app(filename, notes=notes)
+layout = example_app(filename)#, notes=notes)
