@@ -63,7 +63,7 @@ def handle_uploads(excel_contents, template_contents, excel_filename, template_f
         path = os.path.join('temp', template_filename)
         with open(path, 'wb') as f:
             f.write(decoded)
-        messages.append(f"Plantilla Word {template_filename} subida exitosamente.")
+        messages.append(f"\nPlantilla Word {template_filename} subida exitosamente.")
     
     if excel_contents and template_contents:
         return False, " ".join(messages)
@@ -78,19 +78,25 @@ def handle_uploads(excel_contents, template_contents, excel_filename, template_f
 def generate_document(n_clicks, excel_filename, template_filename):
     if n_clicks >0:
         # Leer datos del archivo Excel
-        excel_path = os.path.join('temp', excel_filename)
-        df = pd.read_excel(excel_path, sheet_name='Hoja1')
+        excel_path = os.path.join('temp', excel_filename)        
+        print(f"Path archivo excel: {template_path}")
         
-        # Renderizar la plantilla de Word con los datos del Excel
-        #template_path = os.path.join('temp', template_filename)
-        #doc = DocxTemplate(template_path)
+        # Leer los datos de Excel desde la hoja especificada
+        df = pd.read_excel(excel_path, sheet_name="Hoja1", usecols="A:B", skiprows=0)
+
+        # Convertir el DataFrame en un diccionario (clave-valor)
+        # Primera columna será las claves (Placeholder), segunda columna los valores (Value)
+        data = dict(zip(df.iloc[:, 0], df.iloc[:, 1]))
+
+        # Asegúrate de que todas las claves sean cadenas de caracteres
+        data = {str(k): v for k, v in data.items()}        
         
         
         from docxtpl import DocxTemplate
 
-                # Definir la ruta del archivo
-        template_path = 'dynamic_table_tpl.docx'
-        
+        # Definir la ruta del archivo
+        template_path = os.path.join('temp',template_filename)  # dynamic_table_tpl.docx'
+        print(f"Path plantilla :{template_path}")
 
         # Verificar si el archivo existe
         if not os.path.exists(template_path):
@@ -98,19 +104,10 @@ def generate_document(n_clicks, excel_filename, template_filename):
         
         tpl = DocxTemplate(template_file=template_path)
 
-        context = {
-            'columns': ['fruit', 'vegetable', 'stone', 'thing'],
-            'tbl_contents': [
-                {'label': 'yellow', 'cols': ['banana', 'capsicum', 'pyrite', 'taxi']},
-                {'label': 'red', 'cols': ['apple', 'tomato', 'cinnabar', 'doubledecker']},
-                {'label': 'green', 'cols': ['guava', 'cucumber', 'aventurine', 'card']},
-            ],
-        }
-
-        tpl.render(context)
+        tpl.render(data)
         tpl.save('output/dynamic_table.docx')
         # context = {row['Variable']: row['Valor'] for _, row in df.iterrows()}
-        tpl.render(context)
+        #tpl.render(context)
         
         # Guardar el documento generado
         output_path = ('output.docx')
